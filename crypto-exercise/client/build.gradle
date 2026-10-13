@@ -1,0 +1,17 @@
+plugins {
+    id 'application'
+}
+
+dependencies {
+    implementation project(':crypto-common')
+}
+
+application {
+    mainClass = 'co.icesi.crypto.client.ClientMain'
+}
+
+task runClient(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'co.icesi.crypto.client.ClientMain'
+    standardInput = System.in
+}
