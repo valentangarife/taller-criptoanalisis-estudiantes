@@ -77,6 +77,7 @@ public class WorkerServiceI implements CryptoWorkerService {
                 }
 
                 // Incrementar contador de hashes calculados
+                String hash = KeySpaceHelper.sha256Hex(fullInput);
                 count++;
             }
 

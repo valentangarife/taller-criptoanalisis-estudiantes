@@ -3,6 +3,7 @@ package co.icesi.crypto.master;
 import com.zeroc.Ice.Communicator;
 import com.zeroc.Ice.ObjectAdapter;
 import com.zeroc.Ice.Util;
+import com.zeroc.Ice.InitializationData;
 
 /**
  * MasterMain (Ejercicio de Laboratorio)
@@ -25,7 +26,11 @@ public class MasterMain {
         System.out.printf("   Puerto de escucha: TCP %d%n", port);
         System.out.println("=============================================================\n");
 
-        try (Communicator communicator = Util.initialize(args)) {
+        InitializationData initData = new InitializationData();
+        initData.properties = Util.createProperties();
+        initData.properties.setProperty("Ice.ThreadPool.Server.Size", "8");
+
+        try (Communicator communicator = Util.initialize(initData)) {
             String endpoint = String.format("default -p %d", port);
             ObjectAdapter adapter = communicator.createObjectAdapterWithEndpoints("CryptoMasterAdapter", endpoint);
 

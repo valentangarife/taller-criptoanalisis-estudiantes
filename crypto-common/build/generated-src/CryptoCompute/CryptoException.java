@@ -65,5 +65,5 @@ public class CryptoException extends com.zeroc.Ice.UserException
     }
 
     /** @hidden */
-    public static final long serialVersionUID = -2174315792017241174L;
+    public static final long serialVersionUID = -1555412054L;
 }

@@ -1,21 +1,21 @@
 <state>
-  <timestamp value='1791904564950' />
+  <timestamp value='1791905696711' />
   <sourceSet name='default'>
-    <source name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/src/main/slice/CryptoCompute.ice'>
-      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/build/generated-src/CryptoCompute/ChallengeType.java' />
-      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/build/generated-src/CryptoCompute/ChallengeRequest.java' />
-      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/build/generated-src/CryptoCompute/SearchChunk.java' />
-      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/build/generated-src/CryptoCompute/ChunkResult.java' />
-      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/build/generated-src/CryptoCompute/ChallengeSummary.java' />
-      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/build/generated-src/CryptoCompute/CryptoException.java' />
-      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/build/generated-src/CryptoCompute/CryptoWorkerService.java' />
-      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/build/generated-src/CryptoCompute/CryptoMasterService.java' />
-      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/build/generated-src/CryptoCompute/CryptoWorkerServicePrx.java' />
-      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/build/generated-src/CryptoCompute/_CryptoWorkerServicePrxI.java' />
-      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/build/generated-src/CryptoCompute/CryptoMasterServicePrx.java' />
-      <file name='/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes/crypto-common/build/generated-src/CryptoCompute/_CryptoMasterServicePrxI.java' />
+    <source name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\src\main\slice\CryptoCompute.ice'>
+      <file name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\build\generated-src\CryptoCompute\ChallengeType.java' />
+      <file name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\build\generated-src\CryptoCompute\ChallengeRequest.java' />
+      <file name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\build\generated-src\CryptoCompute\SearchChunk.java' />
+      <file name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\build\generated-src\CryptoCompute\ChunkResult.java' />
+      <file name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\build\generated-src\CryptoCompute\ChallengeSummary.java' />
+      <file name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\build\generated-src\CryptoCompute\CryptoException.java' />
+      <file name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\build\generated-src\CryptoCompute\CryptoWorkerService.java' />
+      <file name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\build\generated-src\CryptoCompute\CryptoMasterService.java' />
+      <file name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\build\generated-src\CryptoCompute\CryptoWorkerServicePrx.java' />
+      <file name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\build\generated-src\CryptoCompute\_CryptoWorkerServicePrxI.java' />
+      <file name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\build\generated-src\CryptoCompute\CryptoMasterServicePrx.java' />
+      <file name='D:\Users\Isabella\Documents\Taller de repaso Compunet II\taller-criptoanalisis-estudiantes\crypto-common\build\generated-src\CryptoCompute\_CryptoMasterServicePrxI.java' />
     </source>
-    <arg value='/opt/homebrew/bin/slice2java' />
-    <arg value='-I/opt/homebrew/share/ice/slice' />
+    <arg value='C:\Program Files\ZeroC\Ice-3.7.11\\bin\slice2java.exe' />
+    <arg value='-IC:\Program Files\ZeroC\Ice-3.7.11\\slice' />
   </sourceSet>
 </state>

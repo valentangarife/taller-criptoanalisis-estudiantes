@@ -5,6 +5,7 @@ import com.zeroc.Ice.Communicator;
 import com.zeroc.Ice.ObjectAdapter;
 import com.zeroc.Ice.ObjectPrx;
 import com.zeroc.Ice.Util;
+import com.zeroc.Ice.InitializationData;
 
 /**
  * WorkerMain (Ejercicio de Laboratorio)
@@ -43,7 +44,11 @@ public class WorkerMain {
         final int finalMasterPort = masterPort;
         final int finalWorkerPort = workerPort;
 
-        try (Communicator communicator = Util.initialize(args)) {
+        InitializationData initData = new InitializationData();
+        initData.properties = Util.createProperties();
+        initData.properties.setProperty("Ice.ThreadPool.Server.Size", "4");
+
+        try (Communicator communicator = Util.initialize(initData)) {
             String endpoint = String.format("default -p %d", finalWorkerPort);
             ObjectAdapter adapter = communicator.createObjectAdapterWithEndpoints("CryptoWorkerAdapter", endpoint);
 

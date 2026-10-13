@@ -225,5 +225,5 @@ public class ChallengeRequest implements java.lang.Cloneable,
     private static final ChallengeRequest _nullMarshalValue = new ChallengeRequest();
 
     /** @hidden */
-    public static final long serialVersionUID = 2070756890088052595L;
+    public static final long serialVersionUID = -1847322765L;
 }

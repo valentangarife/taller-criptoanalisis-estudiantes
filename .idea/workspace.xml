@@ -5,11 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bd623a9-06fd-49f2-8356-09f5096df146" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/ChallengeRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/ChallengeRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/ChallengeSummary.class" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/ChallengeSummary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/ChallengeType.class" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/ChallengeType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/ChunkResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/ChunkResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/CryptoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/CryptoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/CryptoMasterServicePrx.class" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/CryptoMasterServicePrx.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/CryptoWorkerServicePrx.class" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/CryptoWorkerServicePrx.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/SearchChunk.class" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/classes/java/main/CryptoCompute/SearchChunk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/generated-src/CryptoCompute/ChallengeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/generated-src/CryptoCompute/ChallengeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/generated-src/CryptoCompute/ChallengeSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/generated-src/CryptoCompute/ChallengeSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/generated-src/CryptoCompute/ChunkResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/generated-src/CryptoCompute/ChunkResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/generated-src/CryptoCompute/CryptoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/generated-src/CryptoCompute/CryptoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/generated-src/CryptoCompute/SearchChunk.java" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/generated-src/CryptoCompute/SearchChunk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/generated-src/slice2java.df.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/generated-src/slice2java.df.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/libs/crypto-common.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/libs/crypto-common.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-common/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-common/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-exercise/client/build/classes/java/main/co/icesi/crypto/client/ClientMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-exercise/client/build/classes/java/main/co/icesi/crypto/client/ClientMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-exercise/client/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-exercise/client/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-exercise/client/src/main/java/co/icesi/crypto/client/ClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-exercise/client/src/main/java/co/icesi/crypto/client/ClientMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-exercise/server/src/main/java/co/icesi/crypto/master/MasterMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-exercise/server/src/main/java/co/icesi/crypto/master/MasterMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-exercise/server/src/main/java/co/icesi/crypto/master/MasterServiceI.java" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-exercise/server/src/main/java/co/icesi/crypto/master/MasterServiceI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto-exercise/worker/src/main/java/co/icesi/crypto/worker/WorkerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-exercise/worker/src/main/java/co/icesi/crypto/worker/WorkerMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crypto-exercise/worker/src/main/java/co/icesi/crypto/worker/WorkerServiceI.java" beforeDir="false" afterPath="$PROJECT_DIR$/crypto-exercise/worker/src/main/java/co/icesi/crypto/worker/WorkerServiceI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,16 +97,56 @@
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/valentanga/Desktop/5to Semestre/Compunet/taller-criptoanalisis-estudiantes",
+    "last_opened_file_path": "D:/Users/Isabella/Documents/Taller de repaso Compunet II/taller-criptoanalisis-estudiantes",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
-      </set>
-    </attachedChunks>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="taller-criptoanalisis-estudiantes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="taller-criptoanalisis-estudiantes" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="taller-criptoanalisis-estudiantes" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="taller-criptoanalisis-estudiantes" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

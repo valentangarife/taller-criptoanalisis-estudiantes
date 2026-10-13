@@ -245,5 +245,5 @@ public class ChallengeSummary implements java.lang.Cloneable,
     private static final ChallengeSummary _nullMarshalValue = new ChallengeSummary();
 
     /** @hidden */
-    public static final long serialVersionUID = 7283148340659843905L;
+    public static final long serialVersionUID = -75402431L;
 }

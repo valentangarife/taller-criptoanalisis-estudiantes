@@ -235,5 +235,5 @@ public class SearchChunk implements java.lang.Cloneable,
     private static final SearchChunk _nullMarshalValue = new SearchChunk();
 
     /** @hidden */
-    public static final long serialVersionUID = -4057838829636065380L;
+    public static final long serialVersionUID = 1942054812L;
 }

@@ -77,6 +77,7 @@ public class ClientMain {
             System.out.printf("Worker ganador:          %s%n", crackSummary.winningWorkerId);
             System.out.printf("Tiempo total de pared:   %d ms%n", crackSummary.totalWallTimeMs);
             System.out.printf("Hashes computados:       %,d%n", crackSummary.totalHashesComputed);
+            System.out.printf("Chunks despachados:      %d de %d totales%n", crackSummary.totalChunksDispatched, 5_000_000L / 100_000L);
             System.out.printf("Tasa clúster:            %,.2f Hashes/seg%n", crackSummary.hashesPerSecond);
             System.out.printf("¿Coincide con PIN real?: %s%n", crackSummary.solution.equals(secretPin) ? "CORRECTO" : "ERROR");
             System.out.println("--------------------------------------------------\n");
@@ -121,17 +122,36 @@ public class ClientMain {
             long localDurationMs = Math.max(1, System.currentTimeMillis() - localStart);
             double localHashRate = (benchmarkHashes * 1000.0) / localDurationMs;
 
-            double speedup = crackSummary.hashesPerSecond / localHashRate;
-            double efficiency = (speedup / crackSummary.activeWorkers) * 100.0;
+            System.out.printf("[CLIENTE] Rendimiento Local Monohilo: %,.2f H/s%n%n", localHashRate);
+            printMetrics("Reto 1 (Hash Cracking)", crackSummary, localHashRate);
+            printMetrics("Reto 2 (Proof-of-Work)", powSummary, localHashRate);
 
-            System.out.printf("[CLIENTE] Rendimiento Local Monohilo: %,.2f H/s%n", localHashRate);
-            System.out.printf("[CLIENTE] Rendimiento Clúster (%d W):  %,.2f H/s%n", crackSummary.activeWorkers, crackSummary.hashesPerSecond);
-            System.out.printf("[CLIENTE] >> ACELERACIÓN (Speedup S):   %.2fx <<%n", speedup);
-            System.out.printf("[CLIENTE] >> EFICIENCIA (E):            %.2f%% <<%n%n", efficiency);
+            if (args.length >= 3 && args[2].equalsIgnoreCase("fault")) {
+                System.out.println(">>> FASE 4: Reto largo. Haz Ctrl+C en UN worker ahora...");
+                String longSecret = "87654321";
+                ChallengeRequest longRequest = new ChallengeRequest(
+                        "CHALLENGE-FAULT-03", ChallengeType.HASHCRACKING,
+                        KeySpaceHelper.sha256Hex(longSecret), "", 0, 0,
+                        100_000_000L, 200_000L);
+                ChallengeSummary longSummary = master.solveChallenge(longRequest);
+                System.out.printf("Éxito: %s | ¿Coincide?: %s | Tiempo: %d ms%n",
+                        longSummary.success ? "SI" : "NO",
+                        longSummary.solution.equals(longSecret) ? "CORRECTO" : "ERROR",
+                        longSummary.totalWallTimeMs);
+            }
 
         } catch (Exception e) {
             System.err.println("[CLIENTE ERROR] " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    private static void printMetrics(String name, ChallengeSummary s, double localHashRate) {
+        double speedup = s.hashesPerSecond / localHashRate;
+        double efficiency = (speedup / s.activeWorkers) * 100.0;
+        System.out.printf("[CLIENTE] %s%n", name);
+        System.out.printf("          Clúster (%d W): %,.2f H/s%n", s.activeWorkers, s.hashesPerSecond);
+        System.out.printf("          >> ACELERACIÓN (Speedup S): %.2fx <<%n", speedup);
+        System.out.printf("          >> EFICIENCIA (E):          %.2f%% <<%n%n", efficiency);
     }
 }

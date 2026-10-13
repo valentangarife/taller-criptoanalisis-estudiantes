@@ -225,5 +225,5 @@ public class ChunkResult implements java.lang.Cloneable,
     private static final ChunkResult _nullMarshalValue = new ChunkResult();
 
     /** @hidden */
-    public static final long serialVersionUID = 5072345549032953955L;
+    public static final long serialVersionUID = 69507171L;
 }
