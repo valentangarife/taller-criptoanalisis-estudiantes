@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * WorkerServiceI
- * 
+ *
  * Servant del nodo Trabajador (Worker).
  * Responsabilidades a implementar:
  * 1. Ejecución del bucle de búsqueda sobre el SearchChunk asignado.
@@ -40,11 +40,8 @@ public class WorkerServiceI implements CryptoWorkerService {
             throw new CryptoException("Definición de chunk inválida recibida en worker: " + workerId);
         }
 
-        // =========================================================================
-        // TODO 1: REGISTRO DE BANDERA DE CANCELACIÓN
-        // - Crear un Atomic Boolean para este 'chunk.challengeId'.
-        // - Almacenarlo en 'activeChallenges'.
-        // =========================================================================
+        AtomicBoolean isCancelled = new AtomicBoolean(false);
+        activeChallenges.put(chunk.challengeId, isCancelled);
 
         long count = 0;
         boolean found = false;
@@ -52,49 +49,51 @@ public class WorkerServiceI implements CryptoWorkerService {
         String solutionHash = "";
 
         try {
-            // =========================================================================
-            // TODO 2: BUCLE DE EVALUACIÓN DE CANDIDATOS
-            // - Iterar 'idx' desde 'chunk.startCandidate' hasta 'chunk.endCandidate'
-            // (exclusivo).
-            // - TODO 3: Comprobación cooperativa de cancelación cada N iteraciones (ej.
-            // cada 2048):
-            // if (isCancelled.get()) break;
-            // - Generar el candidato: KeySpaceHelper.indexToCandidate(idx,
-            // chunk.alphabetType).
-            // - Concatenar con el prefijo: fullInput = (chunk.prefix != null ? chunk.prefix
-            // : "") + candidate.
-            // - Calcular el hash: KeySpaceHelper.sha256Hex(fullInput).
-            // - Validar si cumple el objetivo:
-            // KeySpaceHelper.checkSolution(hash, chunk.targetHash, chunk.difficulty,
-            // chunk.challengeType).
-            // - Si coincide: marcar found = true, guardar solutionCandidate y solutionHash,
-            // y salir del bucle (break).
-            // =========================================================================
+            for (long idx = chunk.startCandidate; idx < chunk.endCandidate; idx++) {
+
+                // Verificación cooperativa de cancelación cada 2,048 iteraciones
+                if (count % 2048 == 0) {
+                    if (isCancelled.get()) {
+                        break;
+                    }
+                }
+
+                // Generar el candidato (convertir número a cadena)
+                String candidate = KeySpaceHelper.indexToCandidate(idx, chunk.alphabetType);
+
+                // Concatenar con el prefijo
+                String fullInput = (chunk.prefix != null ? chunk.prefix : "") + candidate;
+
+                // Calcular el hash SHA-256
+                String hash = KeySpaceHelper.sha256Hex(fullInput);
+
+                // Validar si cumple el objetivo
+                if (KeySpaceHelper.checkSolution(hash, chunk.targetHash, chunk.difficulty, chunk.challengeType)) {
+                    // ¡ENCONTRAMOS LA SOLUCIÓN!
+                    found = true;
+                    solutionCandidate = candidate;
+                    solutionHash = hash;
+                    break;
+                }
+
+                // Incrementar contador de hashes calculados
+                count++;
+            }
 
         } finally {
             activeChallenges.remove(chunk.challengeId);
         }
 
         long computeTimeMs = System.currentTimeMillis() - startTime;
-        return new ChunkResult(
-                chunk.challengeId,
-                chunk.chunkId,
-                found,
-                solutionCandidate,
-                solutionHash,
-                count,
-                computeTimeMs,
-                workerId);
+        return new ChunkResult(chunk.challengeId, chunk.chunkId, found, solutionCandidate, solutionHash, count, computeTimeMs, workerId);
     }
 
     @Override
     public void cancelSearch(String challengeId, Current current) {
-        // =========================================================================
-        // TODO 4: GESTIÓN DE LA SEÑAL DE CANCELACIÓN REMOTA
-        // - Buscar la bandera de este 'challengeId' en 'activeChallenges'.
-        // - Si existe, poner su valor en 'true'.
-        // =========================================================================
-
+        AtomicBoolean isCancelled = activeChallenges.get(challengeId);
+        if (isCancelled != null) {
+            isCancelled.set(true);
+        }
     }
 
     @Override
